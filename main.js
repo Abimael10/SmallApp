@@ -10,6 +10,8 @@ function elNombre() {
 
     if(nombre.length < 1) {
         resultado.textContent = 'No hay ninguna entrada.';
+    } else if(typeof nombre != String) {
+        resultado.textContent = 'Eso no es un nombre.';
     } else {
         resultado.textContent = 'Tu nombre es: ' + nombre.cap() + '.';
     }
