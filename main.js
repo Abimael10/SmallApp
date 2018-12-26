@@ -8,10 +8,12 @@ function elNombre() {
     let nombre = document.getElementById('entrada').value;
     let resultado = document.getElementById('resultado');
 
-    if (nombre.length < 1) {
-        resultado.textContent = 'No hay ninguna entrada.';
+    if (nombre.length === 0) {
+        resultado.innerText = 'No hay ninguna entrada.';
+    } else if(!isNaN(nombre)) {
+        resultado.innerText = 'Eso no es un nombre.'
     } else {
-        resultado.textContent = 'Tu nombre es: ' + nombre.cap() + '.';
+        resultado.innerText = 'Tu nombre es: ' + nombre.cap() + '.';
     }
 }
 
